@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","22736","Verify the url is correct","chromium","2026-01-09","passed","2026-01-09","","LandingPage.spec.js","",""
+"","6433","Display SALE items","chromium","2026-01-09","passed","2026-01-09","","ItemListingPage.spec.js","",""
+"","6328","Display NEW items","chromium","2026-01-09","passed","2026-01-09","","ItemListingPage.spec.js","",""
