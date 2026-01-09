@@ -8,12 +8,6 @@ class LandingPage{
 
     }
 
-    async navigateToUrl(url){
-        await this.page.goto(url);
-        await this.allowCookie.click();
-        
-    
-    }
 
 }
 module.exports = {LandingPage};

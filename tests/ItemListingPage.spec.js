@@ -1,23 +1,28 @@
 const {test, expect, browser} = require('@playwright/test');
 const {ItemListing} = require('../pageobjects/ItemListing');
-const dataset = require('../utils/ItemListingPageTestData.json');
-
+const { POManager} = require('../pageobjects/POManager');
+const datasetItemListingPage = require('../utils/ItemListingPageTestData.json');
+const datasetCommon = require('../utils/CommonTestDAta.json');
 test('Display SALE items', async ({page})=>{
 
-    const itemListingPage =  new ItemListing(page);
-    await itemListingPage.navigateToUrl(dataset.saleUrl);
+        const poManager = new POManager(page);
+        const itemListingPage = poManager.getItemListing();
+        const common = poManager.getCommon();
+    await common.navigatToURL(datasetCommon.saleUrl);
     const title = await page.title();
-    expect (await page.title()).toContain(dataset.title);
+    expect (title).toContain(datasetItemListingPage.title);
     await itemListingPage.saleItemDisplay();
 
 })
 
 test('Display NEW items', async({page})=>{
     
-    const itemListingPage =  new ItemListing(page);
-    await itemListingPage.navigateToUrl(dataset.newUrl);
+   const poManager = new POManager(page);
+    const itemListingPage = poManager.getItemListing();
+    const common = poManager.getCommon();
+    await common.navigatToURL(datasetCommon.newUrl);
     const title = await page.title();
-    expect (await page.title()).toContain(dataset.title);
+    expect ( title).toContain(datasetItemListingPage.title);
     await itemListingPage.newItemDisplay();
 
 

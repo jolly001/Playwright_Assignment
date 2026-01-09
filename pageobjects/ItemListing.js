@@ -21,6 +21,7 @@ class ItemListing{
             if(tag===dataset.itemTagSale){
 
                 console.log("Total Items with SALE tag is: "+ await this.itemTagOfSale.count());
+                break;
         }
     
     }
