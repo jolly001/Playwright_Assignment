@@ -2,7 +2,7 @@
 import {test, expect} from "@playwright/test";
 //const {LandingPage} = require('../pageobjects/LandingPage');
 //const { POManager} = require('../pageobjects/POManager');
-import { POManager } from "../pageobjects/POManager";
+import { POManager } from "../pageobjects_ts/POManager";
 import datasetLandingPage from "../utils/LandingPageTestData.json";
 import datasetCommon from "../utils/CommonTestDAta.json";
 //const datasetLandingPage = require('../utils/LandingPageTestData.json');
