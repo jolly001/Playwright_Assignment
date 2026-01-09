@@ -1,8 +1,13 @@
-const dataset = require('../utils/ItemListingPageTestData.json')
+const dataset = require('../utils/ItemListingPageTestData.json');
+import {Locator, Page} from "@playwright/test";
 
-class ItemListing{
+export class ItemListing{
+    page:Page;
+    totalItemBox: Locator;
+    itemTagOfSale: Locator;
+    itemTagOfNew: Locator;
 
-    constructor(page){
+    constructor(page:Page){
         this.page = page;
         this.totalItemBox = page.locator(".product-tile__icon-wrapper");
         this.itemTagOfSale = page.locator(".product-tile__icon-wrapper .eyecatcher");
@@ -40,4 +45,3 @@ class ItemListing{
 }
  
 
-module.exports = {ItemListing};
