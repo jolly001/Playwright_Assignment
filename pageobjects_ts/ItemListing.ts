@@ -1,4 +1,5 @@
-const dataset = require('../utils/ItemListingPageTestData.json');
+//const dataset = require('../utils/ItemListingPageTestData.json');
+import dataset from "../utils/ItemListingPageTestData.json"
 import {Locator, Page} from "@playwright/test";
 
 export class ItemListing{
